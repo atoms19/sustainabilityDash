@@ -6,16 +6,16 @@ const insights = [
   "Implement a waste segregation system to increase recycling efficiency.",
 ];
 
-const SustainabilityInsights = () => {
+const AiOverView= () => {
   return (
-    <Card className="shadow-lg rounded-xl">
+    <Card className="shadow-lg bg-gradient-to-r from-red-400 to-blue-300 text-black/60 rounded-xl">
       <CardHeader>
         <CardTitle>AI-Powered Insights</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-2">
+        <ul className="space-y-2 mt-3">
           {insights.map((insight, index) => (
-            <li key={index} className="text-sm">
+            <li key={index} className="text-md">
               {insight}
             </li>
           ))}
@@ -25,4 +25,4 @@ const SustainabilityInsights = () => {
   );
 };
 
-export default SustainabilityInsights;
+export default AiOverView;
