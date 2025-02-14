@@ -33,7 +33,7 @@ const SustainabilityChart: React.FC = () => {
   return (
     <Card className="p-4 shadow-lg rounded-2xl">
       <CardHeader>
-        <CardTitle>Sustainability Tracker</CardTitle>
+        <CardTitle>Sustainability Time-line</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
