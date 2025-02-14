@@ -3,33 +3,18 @@
 import * as React from "react";
 import {
   AtomIcon,
-  AudioWaveform,
-  BarChart2,
-  BarChart4,
   Bolt,
-  BookOpen,
-  Bot,
   Brain,
   Briefcase,
-  Command,
   DropletIcon,
-  Frame,
-  GalleryVerticalEnd,
   LayoutDashboard,
   Leaf,
-  LeafIcon,
-  Map,
-  PieChart,
-  PieChartIcon,
   Settings2,
-  SquareTerminal,
   Trash2,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavUser } from "@/components/nav-user";
-import { TeamSwitcher } from "@/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
@@ -38,7 +23,6 @@ import {
   SidebarMenuButton,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { emitWarning, title } from "process";
 
 // This is sample data.
 
@@ -127,6 +111,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.NavMain} />
+        
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
