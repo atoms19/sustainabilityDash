@@ -70,9 +70,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import SustainabilityChart from "@/components/custom/SustainabilityChart";
-import WasteReductionChart from "@/components/custom/WasteReductionChart";
+
 import SustainabilityInsights from "@/components/custom/sustainabilityInsights";
+import SustainabilityChart from "@/components/custom/sustainabilityChart";
+import WasteReductionChart from "@/components/custom/wasteReductionChart";
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
