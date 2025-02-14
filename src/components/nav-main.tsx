@@ -17,6 +17,8 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 export function NavMain({
   items,
@@ -32,12 +34,17 @@ export function NavMain({
     }[];
   }[];
 }) {
+  let currentPath = usePathname();
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item, index) => (
-          <SidebarMenuButton key={index} tooltip={item.title}>
+          <SidebarMenuButton
+            className={currentPath == item.url ? `bg-primary/50` : ""}
+            key={index}
+            tooltip={item.title}
+          >
             {item.icon && <item.icon />}
             <span>{item.title}</span>
           </SidebarMenuButton>
