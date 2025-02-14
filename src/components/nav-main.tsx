@@ -41,31 +41,6 @@ export function NavMain({
             {item.icon && <item.icon />}
             <span>{item.title}</span>
           </SidebarMenuButton>
-          // <Collapsible
-          //   key={item.title}
-          //   asChild
-          //   defaultOpen={item.isActive}
-          //   className="group/collapsible"
-          // >
-          //   <SidebarMenuItem>
-          //     <CollapsibleTrigger asChild>
-
-          //     </CollapsibleTrigger>
-          //     <CollapsibleContent>
-          //       <SidebarMenuSub>
-          //         {item.items?.map((subItem) => (
-          //           <SidebarMenuSubItem key={subItem.title}>
-          //             <SidebarMenuSubButton asChild>
-          //               <a href={subItem.url}>
-          //                 <span>{subItem.title}</span>
-          //               </a>
-          //             </SidebarMenuSubButton>
-          //           </SidebarMenuSubItem>
-          //         ))}
-          //       </SidebarMenuSub>
-          //     </CollapsibleContent>
-          //   </SidebarMenuItem>
-          // </Collapsible>
         ))}
       </SidebarMenu>
     </SidebarGroup>
