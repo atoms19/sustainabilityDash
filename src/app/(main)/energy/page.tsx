@@ -1,5 +1,5 @@
 import WasteCategoryChart from "@/components/custom/wasteCategoryChart";
-import "/public/trash.svg";
+import "/public/windmill.svg";
 
 import Image from "next/image";
 import MonthlyWasteChart from "@/components/custom/monthlyWasteChart";
@@ -10,7 +10,7 @@ export default function carbonpage() {
   return (
     <div
       style={{
-        backgroundImage: "url('/.svg')",
+        backgroundImage: "url('windmill.svg')",
         backgroundSize: "cover",
       }}
       className="flex min-h-screen w-full flex-col bg-muted/40"

@@ -17,10 +17,12 @@ export function aiChat(query:string){
             {
                 role:"user",
                 content:query,
+                
             }
         ],
         model:'llama3-8b-8192',
-        max_tokens:300,
+        max_completion_tokens:100,
+    
 
     })
 }
