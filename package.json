@@ -20,6 +20,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.3",
     "@radix-ui/react-tooltip": "^1.1.8",
+    "appwrite": "^17.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
@@ -29,7 +30,9 @@
     "next-auth": "5.0.0-beta.25",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "recharts": "^2.15.1",
     "shadcn": "^2.3.0",
+    "smota-stack-starter": "file:",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "textarea": "^0.3.0"

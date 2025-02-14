@@ -1,33 +1,42 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   AudioWaveform,
+  BarChart2,
+  BarChart4,
+  Bolt,
   BookOpen,
   Bot,
+  Brain,
+  Briefcase,
   Command,
   DropletIcon,
   Frame,
   GalleryVerticalEnd,
+  LayoutDashboard,
+  Leaf,
   LeafIcon,
   Map,
   PieChart,
   PieChartIcon,
   Settings2,
   SquareTerminal,
-} from "lucide-react"
+  Trash2,
+} from "lucide-react";
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavMain } from "@/components/nav-main";
+import { NavProjects } from "@/components/nav-projects";
+import { NavUser } from "@/components/nav-user";
+import { TeamSwitcher } from "@/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
+import { title } from "process";
 
 // This is sample data.
 const data = {
@@ -55,99 +64,49 @@ const data = {
   ],
   navMain: [
     {
-      title: "Monthly Emissions",
-      url: "#",
-      icon: LeafIcon,
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: LayoutDashboard,
       isActive: true,
-      items: [
-        {
-          title: "Carbon emissions",
-          url: "#",
-        },
-        {
-          title: "Waste emissions",
-          url: "#",
-        },
-        {
-          title: "Water usage",
-          url: "#",
-        },
+    },
+    {
+      title: "Energy Usage",
+      url: "#",
+      icon: Bolt,
+    },
+    {
+      title: "Waste Management",
+      url: "#",
+      icon: Trash2,
+    },
+    {
+      title: "Carbon Footprint",
+      url: "#",
+      icon: Leaf,
+    },
 
-        {
-          title: "Energy Consuptions",
-          url: "#",
-        },
-      ],
-    },
     {
-      title: "Alignment",
+      title: "Reports & Analytics",
       url: "#",
-      icon: PieChartIcon,
-      items: [
-        {
-          title: "Ranking",
-          url: "#",
-        },
-        {
-          title: "sustainability progress",
-          url: "#",
-        },
-        {
-          title: "Goals",
-          url: "#",
-        },
-        {
-          title: "Public profile",
-          url: "#",
-        },
-        
-      ],
+      icon: BarChart2,
     },
+
     {
-      title: "Documentation",
+      title: "AI Insights",
       url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
+      icon: Brain,
     },
+
+    {
+      title: "Goals & Targets",
+      url: "#",
+      icon: Briefcase,
+    },
+
     {
       title: "Settings",
       url: "#",
       icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
     },
   ],
   projects: [
@@ -167,11 +126,11 @@ const data = {
       icon: Map,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
@@ -184,5 +143,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }

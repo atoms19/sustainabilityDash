@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/app-sidebar"
+import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,16 +6,18 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
-export default function Page({children}:Readonly<{
-    children:React.ReactNode
+export default function Page({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
 }>) {
   return (
     <SidebarProvider>
@@ -28,9 +30,7 @@ export default function Page({children}:Readonly<{
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
-                   sustainablity 
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">sustainablity</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
@@ -46,7 +46,5 @@ export default function Page({children}:Readonly<{
         </div>
       </SidebarInset>
     </SidebarProvider>
-  )
+  );
 }
-
-
