@@ -13,6 +13,7 @@ const AiOverView= () => {
         <CardTitle>AI-Powered Insights</CardTitle>
       </CardHeader>
       <CardContent>
+        <div className="bg-white bg-opacity-50 rounded-xl p-4">
         <ul className="space-y-2 mt-3">
           {insights.map((insight, index) => (
             <li key={index} className="text-md">
@@ -20,6 +21,8 @@ const AiOverView= () => {
             </li>
           ))}
         </ul>
+        </div>
+
       </CardContent>
     </Card>
   );

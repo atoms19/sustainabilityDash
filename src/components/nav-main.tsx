@@ -43,7 +43,7 @@ export function NavMain({
         
           <SidebarMenuButton
             key={index}
-            className={currentPath == item.url ? `bg-primary/20 text-emerald-700 hover:bg-primary/60  transition-colors hover:text-primary-foreground` : ``}
+            className={currentPath == item.url ? `bg-primary/20 text-emerald-700 hover:bg-primary/60  transition-colors hover:text-emerald-50` : ``}
             tooltip={item.title}
           >
             {item.icon && <item.icon />}
