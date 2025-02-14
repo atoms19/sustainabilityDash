@@ -26,7 +26,9 @@
     "dotenv": "^16.4.5",
     "drizzle-kit": "^0.30.4",
     "drizzle-orm": "^0.36.3",
+    "groq-sdk": "^0.15.0",
     "lucide-react": "^0.460.0",
+    "marked": "^15.0.7",
     "next": "15.0.3",
     "next-auth": "5.0.0-beta.25",
     "react": "19.0.0-rc-66855b96-20241106",
@@ -39,6 +41,7 @@
     "textarea": "^0.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
