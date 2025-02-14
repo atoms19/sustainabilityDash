@@ -7,7 +7,9 @@ export default function Home() {
 
   return (
    <div>
-    <h1 className="">hello world </h1>
+
+
+    
    </div>
   );
 }
