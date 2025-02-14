@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from "@/components/ui/card"
 import { Progress } from "@radix-ui/react-progress"
-import { Bolt, CloudLightning, PlusIcon, Trash } from "lucide-react"
+import { Bolt, CloudLightning, PlusIcon, Trash, Zap } from "lucide-react"
 
 export default function PanelCards(){
     return  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
@@ -43,7 +43,7 @@ export default function PanelCards(){
 
       <Card x-chunk="dashboard-05-chunk-2">
         <CardHeader className="pb-2">
-          <CardDescription><CloudLightning className="flex items-center gap-4 w-4 h-4"/> This Month</CardDescription>
+          <CardDescription className="flex items-center gap-4 "><Zap className="flex items-center gap-4 w-4 h-4"/> This Month</CardDescription>
           <CardTitle className="text-4xl">40v</CardTitle>
         </CardHeader>
         <CardContent>
