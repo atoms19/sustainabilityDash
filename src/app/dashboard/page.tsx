@@ -164,7 +164,11 @@ export default function Dashboard() {
               <Card x-chunk="dashboard-05-chunk-2">
                 <CardHeader className="pb-2">
                   <CardDescription>This Month</CardDescription>
+<<<<<<< HEAD
                   <CardTitle className="text-3xl">4000volts</CardTitle>
+=======
+                  <CardTitle className="text-4xl">40v</CardTitle>
+>>>>>>> feature-aichat
                 </CardHeader>
                 <CardContent>
                   <div className="text-xs text-muted-foreground">
