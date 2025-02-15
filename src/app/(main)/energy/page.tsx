@@ -1,10 +1,8 @@
-import WasteCategoryChart from "@/components/custom/wasteCategoryChart";
 import "/public/windmill.svg";
 
 import Image from "next/image";
-import MonthlyWasteChart from "@/components/custom/monthlyWasteChart";
-import EnergyConsumption from "@/components/custom/energyConsumption";
-import EnergySourceChart from "@/components/custom/energySourceCharts";
+import EnergyConsumption from "@/components/custom/energyCharts/energyConsumption";
+import EnergySourceChart from "@/components/custom/energyCharts/energySourceCharts";
 
 export default function carbonpage() {
   return (

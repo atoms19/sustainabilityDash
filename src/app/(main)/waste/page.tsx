@@ -1,8 +1,8 @@
-import WasteCategoryChart from "@/components/custom/wasteCategoryChart";
+import WasteCategoryChart from "@/components/custom/wasteCharts/wasteCategoryChart";
 import "/public/trash.svg";
 
 import Image from "next/image";
-import MonthlyWasteChart from "@/components/custom/monthlyWasteChart";
+import MonthlyWasteChart from "@/components/custom/wasteCharts/monthlyWasteChart";
 
 export default function carbonpage() {
   return (

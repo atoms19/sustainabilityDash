@@ -26,92 +26,79 @@ import {
 
 // This is sample data.
 
-const data={
-  user:{
-    name:'smotium-core',
-    email:'atoms@atoms.com',
-    avatar:'something'
-  }
-,
-  company:{
-    name:'aw-weorkforce',
-    logo:AtomIcon,
-    registerno:'203434343' 
+const data = {
+  user: {
+    name: "smotium-core",
+    email: "atoms@atoms.com",
+    avatar: "something",
+  },
+  company: {
+    name: "aw-weorkforce",
+    logo: AtomIcon,
+    registerno: "203434343",
   },
 
-  NavMain:[
+  NavMain: [
     {
-      title:'Dashboard',
-      url:'/dashboard',
-      icon:LayoutDashboard,
-      isActive:true
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: LayoutDashboard,
+      isActive: true,
     },
     {
-      title:'Energy Usage',
-      url:'/energy',
-      icon:Bolt
+      title: "Energy Usage",
+      url: "/energy",
+      icon: Bolt,
     },
     {
-      title:'Waste Management',
-      url:'/waste',
-      icon:Trash2
+      title: "Waste Management",
+      url: "/waste",
+      icon: Trash2,
     },
     {
-      title:'Carbon Footprint',
-      url:'/carbon',
-      icon:Leaf
+      title: "Carbon Footprint",
+      url: "/carbon",
+      icon: Leaf,
     },
     {
-      title:'Water Usage',
-      url:'/water',
-      icon:DropletIcon
+      title: "Water Usage",
+      url: "/water",
+      icon: DropletIcon,
     },
-    {
-      title:'AI Insights',
-      url:'AI',
-      icon:Brain
-    },
-    {
-      title:'Goals & Targets',
-      url:'/goals',
-      icon:Briefcase
-    },
-    {
-      title:'Settings',
-      url:'/settings',
-      icon:Settings2
-    }
-  ]
 
-}
-
-
+    {
+      title: "Goals & Targets",
+      url: "/goals",
+      icon: Briefcase,
+    },
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: Settings2,
+    },
+  ],
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-
-      <SidebarMenuButton
-              size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
-            >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                <data.company.logo className="size-4" />
-              </div>
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">
-                  {data.company.name}
-                </span>
-                <span className="truncate text-xs">{data.company.registerno}</span>
-              </div>
-             
-      </SidebarMenuButton>
-
+        <SidebarMenuButton
+          size="lg"
+          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+        >
+          <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+            <data.company.logo className="size-4" />
+          </div>
+          <div className="grid flex-1 text-left text-sm leading-tight">
+            <span className="truncate font-semibold">{data.company.name}</span>
+            <span className="truncate text-xs">{data.company.registerno}</span>
+          </div>
+        </SidebarMenuButton>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.NavMain} />
-        
+
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
@@ -121,10 +108,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     </Sidebar>
   );
 }
-
-
-
-
 
 // const data = {
 //   user: {

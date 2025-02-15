@@ -1,12 +1,12 @@
-import WasteCategoryChart from "@/components/custom/wasteCategoryChart";
+import WasteCategoryChart from "@/components/custom/wasteCharts/wasteCategoryChart";
 import "/public/smoke.svg";
 
 import Image from "next/image";
-import MonthlyWasteChart from "@/components/custom/monthlyWasteChart";
-import EnergyConsumption from "@/components/custom/energyConsumption";
-import EnergySourceChart from "@/components/custom/energySourceCharts";
-import CarbonEmissionChart from "@/components/custom/carbonEmissionChart";
-import CarbonEmissionDepartment from "@/components/custom/carbonEmissionDepartment";
+import MonthlyWasteChart from "@/components/custom/wasteCharts/monthlyWasteChart";
+import EnergyConsumption from "@/components/custom/energyCharts/energyConsumption";
+import EnergySourceChart from "@/components/custom/energyCharts/energySourceCharts";
+import CarbonEmissionChart from "@/components/custom/carbonCharts/carbonEmissionChart";
+import CarbonEmissionDepartment from "@/components/custom/carbonCharts/carbonEmissionDepartment";
 
 export default function carbonpage() {
   return (
