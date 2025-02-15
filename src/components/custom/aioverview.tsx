@@ -19,7 +19,7 @@ const AiOverView = () => {
       <CardContent>
         <div className="bg-white bg-opacity-50 rounded-xl p-4">
           {/* <div className="text-md prose" dangerouslySetInnerHTML={{__html:parse()}}>   </div> */}
-          <div>{insights}</div>
+          <div dangerouslySetInnerHTML={{__html:parse(insights)}}></div>
         </div>
       </CardContent>
     </Card>
