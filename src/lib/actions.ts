@@ -3,7 +3,7 @@
 
 
 import { entrySchema, userSchema } from './formSchemas';
-import { insertUser,inSertEntry, insertEntry } from '../db/queries';
+import { insertUser, insertEntry } from '../db/queries';
 
 export async function handleUserForm(data: FormData) {
   try {
@@ -37,7 +37,7 @@ export async function handleEntryForm(data: FormData) {
       const newEntry = await insertEntry(parsedData);
   
       return { success: true, entry: newEntry };
-    } catch (error) {
+    } catch (error {
       return { success: false, error: error.message };
     }
   }
