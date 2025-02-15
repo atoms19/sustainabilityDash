@@ -8,6 +8,13 @@
       "when": 1739529635267,
       "tag": "0000_fresh_hydra",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1739588629609,
+      "tag": "0001_majestic_giant_girl",
+      "breakpoints": true
     }
   ]
 }
