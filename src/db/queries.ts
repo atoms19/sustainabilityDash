@@ -1,93 +1,40 @@
 import { eq } from 'drizzle-orm';
 import { db } from '.';
-import { companies, carbonEmissions, waterUsage, energyUsage, wasteReduction } from './schema';
+import { companies,users,entries,InsertCompany, InsertUser, SelectCompany, SelectUser, InsertEntry, SelectEntry } from './schema';
 
 // Companies Queries
-export async function insertCompany(data: typeof companies.$inferInsert): Promise<typeof companies.$inferSelect> {
+export async function insertCompany(data:InsertCompany): Promise<SelectCompany> {
   const result = await db.insert(companies).values(data).returning();
   return result[0];
 }
 
-export async function selectCompanies(): Promise<typeof companies.$inferSelect[]> {
+export async function selectCompanies(): Promise<SelectCompany[]> {
   return await db.select().from(companies);
 }
 
-// Carbon Emissions Queries
-export async function insertCarbonEmission(data: typeof carbonEmissions.$inferInsert): Promise<typeof carbonEmissions.$inferSelect> {
-  const result = await db.insert(carbonEmissions).values(data).returning();
+
+export async function insertUser(data:InsertUser): Promise<SelectUser> {
+  const result = await db.insert(users).values(data).returning();
   return result[0];
 }
 
-export async function selectCarbonEmissions(): Promise<typeof carbonEmissions.$inferSelect[]> {
-  return await db.select().from(carbonEmissions);
+export async function selectUser(userId: string): Promise<SelectUser| null> {
+  const result = await db.select().from(users).where(eq(users.id, userId));
+  return result.length > 0 ? result[0] : null;
 }
 
-// Water Usage Queries
-export async function insertWaterUsage(data: typeof waterUsage.$inferInsert): Promise<typeof waterUsage.$inferSelect> {
-  const result = await db.insert(waterUsage).values(data).returning();
+
+export async function insertEntry(data: InsertEntry): Promise<SelectEntry> {
+  const result = await db.insert(entries).values(data).returning();
   return result[0];
 }
 
-export async function selectWaterUsage(): Promise<typeof waterUsage.$inferSelect[]> {
-  return await db.select().from(waterUsage);
+export async function selectEntry(entryId: string): Promise<SelectEntry | null> {
+  const result = await db.select().from(entries).where(eq(entries.id, entryId));
+  return result.length > 0 ? result[0] : null;
 }
 
-// Energy Usage Queries
-export async function insertEnergyUsage(data: typeof energyUsage.$inferInsert): Promise<typeof energyUsage.$inferSelect> {
-  const result = await db.insert(energyUsage).values(data).returning();
-  return result[0];
+export async function selectEntriesByYear(year: number): Promise<SelectEntry[]> {
+  const result = await db.select().from(entries).where(eq(entries.year, year));
+  return result;
 }
-
-export async function selectEnergyUsage(): Promise<typeof energyUsage.$inferSelect[]> {
-  return await db.select().from(energyUsage);
-}
-// Waste Reduction Queries
-export async function insertWasteReduction(data: typeof wasteReduction.$inferInsert): Promise<typeof wasteReduction.$inferSelect> {
-  const result = await db.insert(wasteReduction).values(data).returning();
-  return result[0];
-}
-
-export async function selectWasteReduction(): Promise<typeof wasteReduction.$inferSelect[]> {
-  return await db.select().from(wasteReduction);
-}
-
-
-//--------------------------------special queries --------------------------------
-
-
-// Utility function to get the current month in "YYYY-MM-01" format
-// function getCurrentMonthStart(): Date {
-//     const now = new Date();
-//     return new Date(now.getFullYear(), now.getMonth(), 1);
-//   }
-  
-//   export async function getCurrentMonthEnvironmentalData(): Promise<{
-//     waterData: typeof waterUsage.$inferSelect[];
-//     energyData: typeof energyUsage.$inferSelect[];
-//     carbonData: typeof carbonEmissions.$inferSelect[];
-//     wasteReductionData: typeof wasteReduction.$inferSelect[];
-//   }> {
-//     const currentMonth = getCurrentMonthStart();
-  
-//     // Fetch all environmental data for the current month
-//     const [waterData, energyData, carbonData, wasteReductionData] = await Promise.all([
-//       db.select().from(waterUsage).where(eq(energyUsage.month,currentMonth)),
-//       db.select().from(energyUsage).where(),
-//       db.select().from(carbonEmissions).where(),
-//       db.select().from(wasteReduction).where(),
-//     ]);
-  
-//     return {
-//       waterData,
-//       energyData,
-//       carbonData,
-//       wasteReductionData,
-//     };
-//   }
-  
-
-
-
-
-
-  
